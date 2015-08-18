@@ -115,6 +115,7 @@ int ParseHandShake(const char* req, int reqSize, char* res, const int maxResSize
     strncpy(res, "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: ", maxResSize);
     strncat(wskey, "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", 64);
     shacalc(wskey, res + 97);
+	strncat(res, "Sec-WebSocket-Protocol: zyx_protocol", maxResSize);
     strncat(res, "\r\n\r\n", maxResSize);
     resSize = strlen(res);
     

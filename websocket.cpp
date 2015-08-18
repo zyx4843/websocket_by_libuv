@@ -13,7 +13,7 @@ Connection: Upgrade\r\n\
 Sec-WebSocket-Version: 13\r\n\
 Sec-WebSocket-Key: qPDDeYhyaIhjCtefxxR4/Q==\r\n\
 Host: 192.168.58.129:3457\r\n\
-Sec-WebSocket-Protocol: dev_man_protocol\r\n\
+Sec-WebSocket-Protocol: zyx_protocol\r\n\
 \r\n\
 ";
 
@@ -25,6 +25,7 @@ static void cb_write(uv_write_t* req, int status);
 
 int ws_init(ws_connect_t *ptr, uv_loop_t *loop)
 {
+	memset(ptr, 0, sizeof(ws_connect_t));
 	uv_tcp_init(loop, &ptr->connect);
 
 	ptr->connect.data = ptr;
@@ -512,8 +513,6 @@ static void cb_connection(uv_stream_t *stream, int status)
         return;
     }
     
-    ws_init(pConnect, ptr->loop);
-    
 	if(0 == uv_accept((uv_stream_t *)(&ptr->server), (uv_stream_t*)(&pConnect->connect)))
 	{
         pConnect->state = WS_CONNECTING;
@@ -595,7 +594,7 @@ Connection: Upgrade
 Sec-WebSocket-Version: 13
 Sec-WebSocket-Key: qPDDeYhyaIhjCtefxxR4/Q==
 Host: 192.168.8.181:3455
-Sec-WebSocket-Protocol: dev_man_protocol
+Sec-WebSocket-Protocol: zyx_protocol
 
 »Ø¸´:
 
@@ -607,6 +606,6 @@ HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: xY9zZMQTFsuY8fI6UBpaOmQ4x0Y=
-Sec-WebSocket-Protocol: dev_man_protocol
+Sec-WebSocket-Protocol: zyx_protocol
 
 */

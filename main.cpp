@@ -79,6 +79,8 @@ int malloc_connect(ws_connect_t *&ptr, void *obj)
     ptr = new ws_connect_t;
     
     printf("malloc back\n");
+
+	ws_init(ptr, uv_default_loop());
     
     ws_set_connect(ptr, con_cb, cb_error, NULL);
     
