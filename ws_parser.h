@@ -1,6 +1,5 @@
 //
 //  ws_parser.h
-//  nvr
 //
 //  Created by zhengyixiong on 15/8/12.
 //  Copyright (c) 2015Äê zhengyixiong. All rights reserved.

@@ -12,7 +12,7 @@ Upgrade: websocket\r\n\
 Connection: Upgrade\r\n\
 Sec-WebSocket-Version: 13\r\n\
 Sec-WebSocket-Key: qPDDeYhyaIhjCtefxxR4/Q==\r\n\
-Host: 192.168.58.129:3457\r\n\
+Host: 192.168.8.129:3457\r\n\
 Sec-WebSocket-Protocol: zyx_protocol\r\n\
 \r\n\
 ";

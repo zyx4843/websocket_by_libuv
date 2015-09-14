@@ -1,6 +1,5 @@
 //
 //  ws_parser.cpp
-//  nvr
 //
 //  Created by zhengyixiong on 15/8/12.
 //  Copyright (c) 2015年 zhengyixiong. All rights reserved.

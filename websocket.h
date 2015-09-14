@@ -1,3 +1,9 @@
+//
+//  websocket.h
+//
+//  Created by zhengyixiong on 15/8/12.
+//  Copyright (c) 2015年 zhengyixiong. All rights reserved.
+//
 #ifndef __WEBSOCKET_H__
 #define __WEBSOCKET_H__
 
@@ -93,7 +99,6 @@ int ws_state(ws_connect_t *ptr);
 
 //nbufs个数不能超过30,websocket在接口里处理
 int ws_write(ws_connect_t *ptr, OpcodeType type, uv_buf_t *bufs, int nbufs, ws_cb_write cb, void *cb_obj);
-//int ws_write_multi(ws_connect_t *ptr, uv_write_t *req, uv_buf_t *bufs, int nbufs, uv_write_cb cb);
 
 int ws_read_start(ws_connect_t *ptr, ws_cb_malloc cb_malloc, ws_cb_read cb_read, void *cb_read_obj);
 int ws_read_stop(ws_connect_t *ptr);
